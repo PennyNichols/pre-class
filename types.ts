@@ -40,3 +40,34 @@ function throwError(errorMsg: string): never {
 let something: void = null;
 let nothing: never = null;
 // Error : Type ' null ' is not assignable to type ' never '
+
+
+//type assertions
+
+let someValue: unknown = "this is a string";
+console.log(someValue.length) //Object is of type 'unknown'
+
+
+// angle bracket syntax !!! cannot use in react
+
+let someValue: unknown = "this is a string";
+console.log((<string>someValue).length) // 16
+
+// as syntax
+
+let someValue: unknown = "this is a string";
+console.log((someValue as string).length) // 16
+
+
+// named functions
+
+function add(a: number, b: number): number {
+    return a + b;
+}
+
+// anonymous function
+
+let fnName = function (x: number, y: number): number {
+    return x + y;
+}
+
