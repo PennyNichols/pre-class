@@ -71,3 +71,14 @@ let fnName = function (x: number, y: number): number {
     return x + y;
 }
 
+// function parameters
+
+function welcome(message: string, name: string ) : string {
+    return `${message} ${name}!`;
+}
+
+welcome('Hello','Matthew');
+welcome('Hi'); // Compiler Error: Expected 2 arguments, but got 1.
+welcome('Hi','Bill','Gates'); //Compiler Error: Expected 2 arguments, but got 3.
+welcome('Hello',1); // Argument of type 'number' is not assignable to parameter of type 'string'.
+
