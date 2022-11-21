@@ -290,6 +290,7 @@ let emp: IEmployee = { id: 1, name: "Barry Mitchell" }
 
 // Overriding Methods
 
+// When a child class defines its own implementation of a method from the parent class, it is called method overriding. 
 
 
 class Base {
@@ -309,3 +310,55 @@ class Base {
   const d = new Derived();
   d.greet();
   d.greet("reader")
+
+
+//   it’s very common (and always legal!) to refer to a derived class instance through a base class reference:
+
+// Alias the derived instance through a base class reference
+const b: Base = d;
+// No problem
+b.greet();
+
+
+//Overriding Example of Cars:
+
+class Car {
+    name: string;
+    constructor(name: string) {
+        this.name = name;
+    }
+    drive(speed:number = 0) {
+        console.log(`A ${this.name} is going at ${speed} kph!`);
+    }
+}
+
+
+class Mercedes extends Car {
+    
+
+    constructor(name: string) {
+        super(name);
+    }
+    
+    drive(speed = 200) {
+        console.log(`${this.name} engine started`);
+        super.drive(speed);
+    }
+
+}
+
+class Honda extends Car {
+    constructor(name: string) {
+        super(name);
+    }
+    drive(speed = 150) {
+        console.log('A Honda started')
+        super.drive(speed);
+    }
+}
+let mercObj = new Mercedes("Mercedes-Benz GLA");
+let hondaObj = new Honda("Honda City")
+mercObj.drive(); 
+// Mercedes-Benz GLA engine started A Mercedes-Benz GLA is going at 200 kph!
+hondaObj.drive();
+// A Honda started A Honda City is going at 150 kph!
