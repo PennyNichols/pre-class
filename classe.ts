@@ -214,6 +214,98 @@ class Item implements IEditable, IDraggable, ISomeOther {
     // implementation code for all of the interfaces declared after implements keyword
 }
 
+// function types with interfaces
+
+// To describe a function type, you assign the interface to the function signature that contains the parameter list with types and returned types
+
+interface StringFormat {
+    (str: string, isUpper: boolean): string
+}
+let format: StringFormat;
+format = function (str: string, isUpper: boolean) {
+    return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
+};
+console.log(format('hi', true));
+
+
+// Extending Interfaces
+
+interface IPerson {
+    name: string;
+    gender: string;
+    readonly SSN: number; // this property cannot be changed after initialization
+}
+interface IEmployee extends IPerson {
+    id: number;
+    department?: string; // this property is optional
+}
+let person1: IEmployee = {
+    id:1,
+    SSN: 11234567,
+    name:"Mark",
+    gender:"Male"
+    // department is not a mandatory field, we can skip it
+}
+person1.SSN = 32382322; // compiler error
+
+
+// To describe a function type, you assign the interface to the function signature that contains the parameter list with types and returned types
+
+interface StringFormat {
+    (str: string, isUpper: boolean): string
+}
+
+// inheritance
+
+// Classes may extend from a base class. A derived class has all the properties and methods of its base class, and also define additional members.
+class Animal {
+    move() {
+      console.log("Moving along!");
+    }
+}
+class Dog extends Animal {
+    woof(times: number) {
+        for (let i = 0; i < times; i++) {
+            console.log("woof!");
+        }
+    }
+}
+const d = new Dog();
+// Base / Super / Parent class method
+d.move();
+// Derived / Sub / Child class method
+d.woof(3);
+
+
+// Interface can extends interfaces or classes as well.
+
+class Person {
+    name: string;
+}
+interface IEmployee extends Person { 
+    id: number;
+}
+let emp: IEmployee = { id: 1, name: "Barry Mitchell" }
+
+
+// Overriding Methods
 
 
 
+class Base {
+    greet() {
+      console.log("Hello, world!");
+    }
+  }
+  class Derived extends Base {
+    greet(name?: string) {
+      if (name === undefined) {
+        super.greet();
+      } else {
+        console.log(`Hello, ${name.toUpperCase()}`);
+      }
+    }
+  }
+  const d = new Derived();
+  d.greet();
+  d.greet("reader")
