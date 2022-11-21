@@ -141,3 +141,79 @@ class Person {
 let mark = new Person("Mark", "Madison", "5");
 console.log(mark);
 
+// interfaces
+
+// without interface:
+
+function getFullName(person: {
+    firstName: string;
+    lastName: string
+}) {
+    return `${person.firstName} ${person.lastName}`;
+}
+let person = {
+    firstName: 'John',
+    lastName: 'Doe'
+};
+console.log(getFullName(person));
+
+
+// with interface
+
+interface IPerson {
+    firstName: string;
+    lastName: string;
+}
+function getFullName(person: IPerson) {
+    return `${person.firstName} ${person.lastName}`;
+}
+let john = {
+    firstName: 'John',
+    lastName: 'Doe'
+};
+console.log(getFullName(john));
+
+// Passed parameter may have other properties, only requirement is it should comply with Person interface
+
+let jane = {
+    firstName: 'Jane',
+    middleName: 'K.'
+    lastName: 'Doe',
+    age: 22
+ };
+ let fullName = getFullName(jane);
+ console.log(fullName); // Jane Doe
+
+
+// define properties and methods inside interfaces, but interfaces cannot contain implementation code. The implementation code should be written in implementing class
+
+ interface IPerson {
+    firstName: string;
+    lastName: string;
+    getFullName(): string;
+}
+class Person implements IPerson {
+    constructor(public firstName, public lastName){}
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+let p1 = new Person("Mark", "Maddison");
+console.log(p1.getFullName());
+
+
+// A class can implement more than one interface, but can extend only one parent class. Same extend rule applies to interfaces as well.
+
+interface IEditable {
+    // edit logic declaration
+}
+interface IDraggable {
+    // drag logic declaration
+}
+class Item implements IEditable, IDraggable, ISomeOther {
+    // implementation code for all of the interfaces declared after implements keyword
+}
+
+
+
+
