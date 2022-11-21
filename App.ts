@@ -11,3 +11,6 @@ button.addEventListener('click', () => {
     console.log(add(+a.value, +b.value));
 // place a + sign in front of a and b (in line 11) to convert them to number
 });
+
+
+// JS file takes precedence over TS file. All variables will be errors, as they are already defines in JS file.
