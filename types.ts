@@ -132,3 +132,14 @@ const product:prod = {
         description: 'great gift for the holidays',
     }
 }
+
+// type: unknown - can take any type, the type is initially unknown
+
+
+
+// void - if your function is not returning anything:
+
+function warnUser() : void {
+    console.log('this is a warning')
+}
+
