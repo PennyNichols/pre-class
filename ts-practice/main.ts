@@ -34,7 +34,7 @@ function isUser(person: Person): person is User {
 	return person.type === "user";
 }
 
-function logPerson(person: Person) {
+function logPerson(person: Person): void {
 	let jobInfo: string = "";
     if (isAdmin(person)) {
         jobInfo: person.role
