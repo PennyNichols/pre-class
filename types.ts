@@ -95,3 +95,40 @@ type myObj={
 let newObj:myObj={name:'john', age:20, flag: true}
 let newObj2:myObj={name:'penny', age:30, flag: false}
 
+
+// arrays
+
+let newArray:string[];   // everything in array is string
+newArray=['hello', 'hi', '10', '40', 'true'];
+
+
+
+// arrays with multiple types
+
+let hybrid: any[]    // can put any type for everything in array
+
+hybrid=['hello', 10, false]
+
+
+// array in object
+
+
+type prod={
+    id:string;
+    price: number;
+    tags:string[],
+    details:{
+        title:string;
+        description:string;
+    }
+}
+
+const product:prod = {
+    id: '123',
+    price: 123.32,
+    tags: ['discount', 'great-offer'],
+    details: {
+        title: 'red ribbon',
+        description: 'great gift for the holidays',
+    }
+}
