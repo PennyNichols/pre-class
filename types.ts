@@ -143,3 +143,11 @@ function warnUser() : void {
     console.log('this is a warning')
 }
 
+// void is also used for setting state:
+
+const handleclick=():void=>{
+    setState(false)
+    setFlag(true)
+}
+
+
