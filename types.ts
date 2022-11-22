@@ -151,3 +151,9 @@ const handleclick=():void=>{
 }
 
 
+// combine types:
+
+type Combinable = number | string | boolean;
+function addTwo(input:Combinable, input2:number){
+    return typeof input === 'number' ? input+input2 : input+input2.toString()
+}
