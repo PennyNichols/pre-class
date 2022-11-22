@@ -157,3 +157,16 @@ type Combinable = number | string | boolean;
 function addTwo(input:Combinable, input2:number){
     return typeof input === 'number' ? input+input2 : input+input2.toString()
 }
+
+
+// more parameters
+
+// function withMoreParams(num1:number, num2:number, ...params:string[]){
+//     return num1+num2+Number(params)
+// }
+// console.log(withMoreParams(10,20,'20','30'))
+
+function withMoreParams(num1:number, num2:number, ...params:any[]){
+    return params.join(',')
+}
+console.log(withMoreParams(10,20,'20',20, false))
