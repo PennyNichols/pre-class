@@ -82,3 +82,16 @@ welcome('Hi'); // Compiler Error: Expected 2 arguments, but got 1.
 welcome('Hi','Bill','Gates'); //Compiler Error: Expected 2 arguments, but got 3.
 welcome('Hello',1); // Argument of type 'number' is not assignable to parameter of type 'string'.
 
+
+
+// using an objects value formatting as a prototype for structure of new objects:
+
+type myObj={
+    name: string;
+    age: number;
+    flag: boolean;
+}
+
+let newObj:myObj={name:'john', age:20, flag: true}
+let newObj2:myObj={name:'penny', age:30, flag: false}
+
