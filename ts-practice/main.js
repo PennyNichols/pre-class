@@ -1,32 +1,39 @@
 "use strict";
+//  { type: 'user', name: 'Max Mustermann, age: 25, occupation: 'Chimney sweep'},
+//  { type: 'admin', name: 'Jane Doe', age: 32, role: 'Administrator' },
+//  { type: 'user', name: 'Kate Müller', age: 23, occupation: 'Astronaut' },
+//  { type: 'admin', name: 'Bruce Willis', age: 64, role: 'World saver' },
 const persons = [
     {
-        type: "user",
-        name: "Max Mustermann",
+        type: 'user',
+        name: 'Max Mustermann',
         age: 25,
-        occupation: "Chimney sweep",
+        occupation: 'Chimney sweep',
     },
-    { type: "admin", name: "Jane Doe", age: 32, role: "Administrator" },
-    { type: "user", name: "Kate Müller", age: 23, occupation: "Astronaut" },
-    { type: "admin", name: "Bruce Willis", age: 64, role: "World saver" },
+    { type: 'admin', name: 'Jane Doe', age: 32, role: 'Administrator' },
+    { type: 'user', name: 'Kate Müller', age: 23, occupation: 'Astronaut' },
+    { type: 'admin', name: 'Bruce Willis', age: 64, role: 'World saver' },
 ];
 function isAdmin(person) {
-    return person.type === "admin";
+    return person.type === 'admin';
 }
 function isUser(person) {
-    return person.type === "user";
+    return person.type === 'user';
 }
 function logPerson(person) {
-    let jobInfo = "";
+    let jobInfo = '';
     if (isAdmin(person)) {
-        jobInfo: person.role;
+        jobInfo = person.role;
     }
     if (isUser(person)) {
         jobInfo = person.occupation;
     }
     console.log(` - ${person.name}, ${person.age}, ${jobInfo}`);
 }
-logPerson(persons[0]);
-logPerson(persons[1]);
-console.log('Admins');
-persons.filter(isAdmin).forEach(logPerson);
+console.log('Admins:');
+persons
+    .filter((person) => isAdmin(person))
+    .forEach((person) => logPerson(person));
+console.log();
+console.log('Users:');
+persons.filter(isUser).forEach(logPerson);
