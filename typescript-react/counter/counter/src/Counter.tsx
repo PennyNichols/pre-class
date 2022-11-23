@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 // can indicate prop types here, or deconstruct them as shown beneath
  type Props={
      title:string;
-     data:number;
+     data:string | number;
  }
 
 const Counter = ({title, data}:Props) => {
@@ -12,7 +12,7 @@ const Counter = ({title, data}:Props) => {
     const [initialValue, setInitial] = useState(data)
 
     const handleClick = ()=>{
-        setInitial(initialValue+1)
+        setInitial(+initialValue+1)
     }
 
   return (

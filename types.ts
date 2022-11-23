@@ -167,6 +167,13 @@ function addTwo(input:Combinable, input2:number){
 // console.log(withMoreParams(10,20,'20','30'))
 
 function withMoreParams(num1:number, num2:number, ...params:any[]){
-    return params.join(',')
+    let arr=[...params];
+    let sum=0;
+    for (let i of arr){
+        if (!isNaN(i)){
+            sum+=Number(i)
+        }
+    }
+    return sum;
 }
 console.log(withMoreParams(10,20,'20',20, false))
