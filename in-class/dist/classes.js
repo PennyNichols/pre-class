@@ -12,25 +12,49 @@
 // }
 // const user1=new User ('1', 'user2020', 'password1')
 // console.log(user1)
-class Person {
-    constructor(name) {
-        this.name = name;
+// class Person {
+//     name: string;
+//     constructor(name: string){
+//         this.name = name;
+//     }
+//     displayName() {
+//         console.log(`name ${this.name}`)
+//     }
+// }
+// class Employee extends Person {
+//     empCode: number;
+//     constructor(empCode: number, name: string){
+//         super(name)
+//         this.empCode=empCode
+//     }
+//     empPrint(): void {
+//         console.log(`${this.name} - ${this.empCode}`)
+//     }
+// }
+// const person1 = new Person('mike');
+// console.log(person1)
+// const emp1 = new Employee(15, 'sally');
+// emp1.empPrint()
+// emp1.displayName()
+class Vehicle {
+    constructor(year, color) {
+        this.year = year;
+        this.color = color;
     }
-    displayName() {
-        console.log(`name ${this.name}`);
+    startEngine() {
+        console.log(`Engine Started`);
     }
 }
-class Employee extends Person {
-    constructor(empCode, name) {
-        super(name);
-        this.empCode = empCode;
+class Car extends Vehicle {
+    constructor(year, color, model, numOfDoors) {
+        super(year, color);
+        this.model = model;
+        this.numOfDoors = numOfDoors;
     }
-    empPrint() {
-        console.log(`${this.name} - ${this.empCode}`);
+    stopEngine() {
+        console.log('Car Stopped !');
     }
 }
-const person1 = new Person('mike');
-console.log(person1);
-const emp1 = new Employee(15, 'sally');
-emp1.empPrint();
-emp1.displayName();
+const car = new Car(1984, 'blue', 'bmw', 4);
+console.log(car.color);
+car.startEngine();
