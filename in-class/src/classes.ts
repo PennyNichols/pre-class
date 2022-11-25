@@ -79,3 +79,31 @@
 // car.startEngine();
 
 
+// abstract class User {
+    
+//     abstract addUser(user: string):void;
+//     abstract removeUser(id: string): void;
+//     abstract printUsers():void;
+// }
+
+// class Admin extends User {
+//     users: string[]=[];
+    
+//     addUser(user: string): void {
+//           this.users.push(user)
+//     }
+
+//     removeUser(id: string): void {
+        
+//     }
+
+//     printUsers(): void {
+//       console.log(this.users)
+//     }
+// }
+
+// const admin = new Admin()
+
+// admin.addUser('john')
+// admin.printUsers();
+
