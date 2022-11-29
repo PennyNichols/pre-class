@@ -45,65 +45,65 @@
 // emp1.displayName()
 
 
-abstract class Vehicle{
-    year: number;
-    color: string;
-    constructor(year: number, color: string){
-        this.year = year;
-        this.color=color;
-    }
-    startEngine():void{
-        console.log(`Engine Started`)
-    }
-    abstract stopEngine():void;
+// abstract class Vehicle{
+//     year: number;
+//     color: string;
+//     constructor(year: number, color: string){
+//         this.year = year;
+//         this.color=color;
+//     }
+//     startEngine():void{
+//         console.log(`Engine Started`)
+//     }
+//     abstract stopEngine():void;
     
-}
-
-class Car extends Vehicle {
-    model: string;
-    numOfDoors: number;
-
-    constructor(year: number, color: string, model:string, numOfDoors: number){
-        super(year, color);
-        this.model = model;
-        this.numOfDoors = numOfDoors
-    }
-
-    stopEngine(): void {
-        console.log('Car Stopped !')
-    }
-}
-
-const car = new Car(1984,'blue','bmw',4);
-console.log(car.color)
-car.startEngine();
-
-
-// abstract class User {
-    
-//     abstract addUser(user: string):void;
-//     abstract removeUser(id: string): void;
-//     abstract printUsers():void;
 // }
 
-// class Admin extends User {
-//     users: string[]=[];
-    
-//     addUser(user: string): void {
-//           this.users.push(user)
+// class Car extends Vehicle {
+//     model: string;
+//     numOfDoors: number;
+
+//     constructor(year: number, color: string, model:string, numOfDoors: number){
+//         super(year, color);
+//         this.model = model;
+//         this.numOfDoors = numOfDoors
 //     }
 
-//     removeUser(id: string): void {
+//     stopEngine(): void {
+//         console.log('Car Stopped !')
+//     }
+// }
+
+// const car = new Car(1984,'blue','bmw',4);
+// console.log(car.color)
+// car.startEngine();
+
+
+abstract class User {
+    
+    abstract addUser(user: string):void;
+    abstract removeUser(id: string): void;
+    abstract printUsers():void;
+}
+
+class Admin extends User {
+    users: string[]=[];
+    
+    addUser(user: string): void {
+          this.users.push(user)
+    }
+
+    removeUser(id: string): void {
         
-//     }
+    }
 
-//     printUsers(): void {
-//       console.log(this.users)
-//     }
-// }
+    printUsers(): void {
+      console.log(this.users)
+    }
+}
 
-// const admin = new Admin()
+const admin = new Admin()
 
-// admin.addUser('john')
-// admin.printUsers();
+admin.addUser('john')
+admin.printUsers();
 
