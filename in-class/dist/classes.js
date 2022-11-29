@@ -63,22 +63,48 @@
 // const car = new Car(1984,'blue','bmw',4);
 // console.log(car.color)
 // car.startEngine();
-class User {
+// abstract class User {
+//     abstract addUser(user: string):void;
+//     abstract removeUser(id: string): void;
+//     abstract printUsers():void;
+// }
+// class Admin extends User {
+//     users: string[]=[];
+//     addUser(user: string): void {
+//           this.users.push(user)
+//     }
+//     removeUser(id: string): void {
+//     }
+//     printUsers(): void {
+//       console.log(this.users)
+//     }
+// }
+// const admin = new Admin()
+// admin.addUser('john')
+// admin.printUsers();
+class Person {
+    // public name: string;
+    // private age: number;
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+        this.name = name;
+        this.age = age;
+    }
+    getAge() {
+        return this.age;
+    }
+    setAge(newAge) {
+        if (newAge > 0 && newAge <= 100) {
+            this.age = newAge;
+        }
+        else {
+            throw new Error('Invalid Age Value');
+        }
+    }
 }
-class Admin extends User {
-    constructor() {
-        super(...arguments);
-        this.users = [];
-    }
-    addUser(user) {
-        this.users.push(user);
-    }
-    removeUser(id) {
-    }
-    printUsers() {
-        console.log(this.users);
-    }
-}
-const admin = new Admin();
-admin.addUser('john');
-admin.printUsers();
+const mike = new Person('mike', 36);
+// console.log(mike.age)    wont work!! Private!
+console.log(mike.getAge());
+mike.setAge(8);
+console.log(mike.getAge());
