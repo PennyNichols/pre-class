@@ -45,38 +45,38 @@
 // emp1.displayName()
 
 
-// abstract class Vehicle{
-//     year: number;
-//     color: string;
-//     constructor(year: number, color: string){
-//         this.year = year;
-//         this.color=color;
-//     }
-//     startEngine():void{
-//         console.log(`Engine Started`)
-//     }
-//     abstract stopEngine():void;
+abstract class Vehicle{
+    year: number;
+    color: string;
+    constructor(year: number, color: string){
+        this.year = year;
+        this.color=color;
+    }
+    startEngine():void{
+        console.log(`Engine Started`)
+    }
+    abstract stopEngine():void;
     
-// }
+}
 
-// class Car extends Vehicle {
-//     model: string;
-//     numOfDoors: number;
+class Car extends Vehicle {
+    model: string;
+    numOfDoors: number;
 
-//     constructor(year: number, color: string, model:string, numOfDoors: number){
-//         super(year, color);
-//         this.model = model;
-//         this.numOfDoors = numOfDoors
-//     }
+    constructor(year: number, color: string, model:string, numOfDoors: number){
+        super(year, color);
+        this.model = model;
+        this.numOfDoors = numOfDoors
+    }
 
-//     stopEngine(): void {
-//         console.log('Car Stopped !')
-//     }
-// }
+    stopEngine(): void {
+        console.log('Car Stopped !')
+    }
+}
 
-// const car = new Car(1984,'blue','bmw',4);
-// console.log(car.color)
-// car.startEngine();
+const car = new Car(1984,'blue','bmw',4);
+console.log(car.color)
+car.startEngine();
 
 
 // abstract class User {
