@@ -39,8 +39,15 @@
 
 // let obj = getArr([{name: 'mike'}, {name: 'John'}])
 
-function log<T>(num: T):void{
-    console.log(`type ${typeof num}`)
+// function log<T>(num: T):void{
+//     console.log(`type ${typeof num}`)
+// }
+
+// log(45)
+
+class KeyValuePair<T,U>{
+    constructor(public key: T, public value: U){}
 }
 
-log(45)
+const obj = new KeyValuePair('name', 'John')
+const obj2 = new KeyValuePair('age', 50)
