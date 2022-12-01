@@ -12,14 +12,22 @@
 // promise.then(data =>
 //     data.split(' ')
 //     ).catch()
-function getArray(items) {
+// function getArray(items: any[]): any[]{
+//     return new Array().concat(items)
+// }
+// let numArr = getArray([1,2,3])
+// let strArr = getArray(['john', 'jane'])
+// numArr.push(4)
+// strArr.push('Jake')
+// numArr.push('Tim')
+// strArr.push(5)
+// console.log(numArr)
+// console.log(strArr)
+function getArr(items) {
     return new Array().concat(items);
 }
-let numArr = getArray([1, 2, 3]);
-let strArr = getArray(['john', 'jane']);
-numArr.push(4);
-strArr.push('Jake');
-numArr.push('Tim');
-strArr.push(5);
-console.log(numArr);
-console.log(strArr);
+let numArr = getArr([1, 2, 3]);
+let strArr = getArr(['john', 'jane']);
+strArr.push(3);
+numArr.push('mike');
+let obj = getArr([{ name: 'mike' }, { name: 'John' }]);
