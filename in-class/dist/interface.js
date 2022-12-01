@@ -2,10 +2,12 @@
 // interface Person {
 //     name: string
 // }
-class Square {
-    constructor(color, area) {
-        this.color = color;
-        this.area = area;
-    }
+function add(n1, n2) {
+    return n1 + n2;
 }
-const sq = new Square({ r: 125, g: 0, b: 255 }, 60);
+function add2(n1, n2) {
+    return n1 + n2;
+}
+let arithmeticAdd = add;
+// let concat: Sum = add2
+arithmeticAdd(2, 5);
