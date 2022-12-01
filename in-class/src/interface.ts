@@ -21,14 +21,33 @@
 
 // const point: Point = {x: 122, y: 234}
 
-type PointX = {
-    x: number
+// type PointX = {
+//     x: number
+// }
+
+// type PointY = {
+//     y: number
+// }
+
+// type Point = PointX & PointY
+
+// const point: Point = {x: 122, y: 234}
+
+interface Color {
+    color: {r: number, g: number, b: number}
 }
 
-type PointY = {
-    y: number
+interface Shape{
+    area: number
 }
 
-type Point = PointX & PointY
+class Square implements Color, Shape {
+    color: {r: number, g: number, b: number}
+    area: number
+    constructor(color: {r: number, g: number, b: number}, area: number){
+        this.color = color;
+        this.area = area;
+    }    
+}
 
-const point: Point = {x: 122, y: 234}
+const sq = new Square({r: 125, g: 0, b: 255}, 60)
