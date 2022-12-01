@@ -111,22 +111,27 @@
 //         this.empName= empName;
 //     }
 // }
-class Department {
-    constructor(id, dept, numOfEmpl) {
-        this.id = id;
-        this.dept = dept;
-        this.numOfEmpl = numOfEmpl;
-    }
-}
-class Accounting extends Department {
-    constructor(id, numOfEmpl) {
-        super(id, 'accounting', numOfEmpl);
-        this.id = id;
-        this.numOfEmpl = numOfEmpl;
-    }
-    printNumOfEmpl() {
-        console.log(this.numOfEmpl);
-    }
-}
-const dept = new Accounting(1, 10);
-dept.printNumOfEmpl();
+// class Department {
+//     constructor(public id: number, public dept: string, protected numOfEmpl: number){
+//     }
+// }
+// class Accounting extends Department {
+//     constructor(public id: number, public numOfEmpl: number){
+//         super(id, 'accounting', numOfEmpl)
+//     }
+//     printNumOfEmpl(): void {
+//         console.log(this.numOfEmpl)
+//     }
+// }
+// const dept = new Accounting(1, 10)
+// dept.printNumOfEmpl()
+// class User {
+//     constructor(public username: string, public readonly password: string){
+//     }
+// }
+// const user = new User('user2020', '1223345');
+// console.log(user.password)
+// user.password = '12434'  /// read only!
+// let password: string = user.password;
+// password = '323453'
+// user.username ='penny';
