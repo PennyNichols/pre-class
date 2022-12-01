@@ -105,11 +105,28 @@
 // console.log(mike.getAge())
 // mike.setAge(8)
 // console.log(mike.getAge())
-class Employee {
-    constructor(empCode, empName) {
-        this.empCode = empCode;
-        this.empName = empName;
-        this.empCode = empCode;
-        this.empName = empName;
+// class Employee {
+//     constructor(private empCode: number, public empName: string){
+//         this.empCode = empCode;
+//         this.empName= empName;
+//     }
+// }
+class Department {
+    constructor(id, dept, numOfEmpl) {
+        this.id = id;
+        this.dept = dept;
+        this.numOfEmpl = numOfEmpl;
     }
 }
+class Accounting extends Department {
+    constructor(id, numOfEmpl) {
+        super(id, 'accounting', numOfEmpl);
+        this.id = id;
+        this.numOfEmpl = numOfEmpl;
+    }
+    printNumOfEmpl() {
+        console.log(this.numOfEmpl);
+    }
+}
+const dept = new Accounting(1, 10);
+dept.printNumOfEmpl();
