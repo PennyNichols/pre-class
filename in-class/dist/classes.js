@@ -135,3 +135,14 @@
 // let password: string = user.password;
 // password = '323453'
 // user.username ='penny';
+class Product {
+    constructor(name) {
+        this.products = [];
+        this.name = name;
+    }
+    static listProducts() {
+        console.log(" this is product listing");
+    }
+}
+Product.listProducts();
+const tv = new Product('tv');

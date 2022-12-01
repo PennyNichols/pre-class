@@ -173,3 +173,17 @@
 // password = '323453'
 // user.username ='penny';
 
+class Product {
+    products: string[] = [];
+    name: string;
+    constructor(name: string){
+        this.name = name;
+    }
+    static listProducts(){
+        console.log(" this is product listing");
+    }
+}
+
+Product.listProducts();
+
+const tv = new Product('tv')
