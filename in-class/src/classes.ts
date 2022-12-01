@@ -141,20 +141,35 @@
 //     }
 // }
 
-class Department {
-    constructor(public id: number, public dept: string, protected numOfEmpl: number){
-    }
-}
+// class Department {
+//     constructor(public id: number, public dept: string, protected numOfEmpl: number){
+//     }
+// }
 
-class Accounting extends Department {
-    constructor(public id: number, public numOfEmpl: number){
-        super(id, 'accounting', numOfEmpl)
-    }
-    printNumOfEmpl(): void {
-        console.log(this.numOfEmpl)
-    }
-}
+// class Accounting extends Department {
+//     constructor(public id: number, public numOfEmpl: number){
+//         super(id, 'accounting', numOfEmpl)
+//     }
+//     printNumOfEmpl(): void {
+//         console.log(this.numOfEmpl)
+//     }
+// }
 
-const dept = new Accounting(1, 10)
+// const dept = new Accounting(1, 10)
 
-dept.printNumOfEmpl()
+// dept.printNumOfEmpl()
+
+
+// class User {
+//     constructor(public username: string, public readonly password: string){
+
+//     }
+// }
+
+// const user = new User('user2020', '1223345');
+// console.log(user.password)
+// user.password = '12434'  /// read only!
+// let password: string = user.password;
+// password = '323453'
+// user.username ='penny';
+
