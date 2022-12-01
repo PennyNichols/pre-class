@@ -10,5 +10,4 @@
 //         this.password = password;
 //     }
 // }
-const person = { name: 'penny' };
-const isMarried = true;
+const point = { x: 122, y: 234 };

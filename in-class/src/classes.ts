@@ -203,11 +203,25 @@
 // c1.diameter = 20
 // console.log(c1.radius)
 
-interface Person {
-    name: string
+// interface Person {
+//     name: string
+// }
+
+// type Person = {
+//     name: string
+// }
+
+// type bolOrStr = string | boolean
+
+// const person: Person = {name: 'penny'}
+// const isMarried: bolOrStr = true;
+
+interface Point {
+    x: number
 }
 
-type bolOrStr = string | boolean
+interface Point{
+    y: number
+}
 
-const person: Person = {name: 'penny'}
-const isMarried: bolOrStr = true;
+const point: Point = {x: 122, y: 234}
