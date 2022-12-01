@@ -52,3 +52,7 @@ class KeyValuePair<T,U>{
 const obj = new KeyValuePair('name', 'John')
 const obj2 = new KeyValuePair('age', 50)
 const obj3 = new KeyValuePair(1, 'one')
+
+console.log(obj)
+console.log(obj2)
+console.log(obj3)
