@@ -23,11 +23,15 @@
 // strArr.push(5)
 // console.log(numArr)
 // console.log(strArr)
-function getArr(items) {
-    return new Array().concat(items);
+// function getArr<T>(items: T[]): T[]{  //<--- keeps types within array the same 
+//     return new Array().concat(items);
+// }
+// let numArr = getArr([1,2,3])
+// let strArr = getArr(['john', 'jane'])
+// strArr.push(3);
+// numArr.push('mike');
+// let obj = getArr([{name: 'mike'}, {name: 'John'}])
+function log(num) {
+    console.log(`type ${typeof num}`);
 }
-let numArr = getArr([1, 2, 3]);
-let strArr = getArr(['john', 'jane']);
-strArr.push(3);
-numArr.push('mike');
-let obj = getArr([{ name: 'mike' }, { name: 'John' }]);
+log('hello world');
