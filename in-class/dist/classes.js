@@ -135,14 +135,30 @@
 // let password: string = user.password;
 // password = '323453'
 // user.username ='penny';
-class Product {
-    constructor(name) {
-        this.products = [];
-        this.name = name;
+// class Product {
+//     products: string[] = [];
+//     name: string;
+//     constructor(name: string){
+//         this.name = name;
+//     }
+//     static listProducts(){
+//         console.log(" this is product listing");
+//     }
+// }
+// Product.listProducts();
+// const tv = new Product('tv')
+class Circle {
+    constructor(radius) {
+        this.radius = radius;
     }
-    static listProducts() {
-        console.log(" this is product listing");
+    get diameter() {
+        return this.radius * 2;
+    }
+    set diameter(d) {
+        this.radius = Math.floor(d / 2);
     }
 }
-Product.listProducts();
-const tv = new Product('tv');
+let c1 = new Circle(5);
+console.log(c1.diameter);
+c1.diameter = 20;
+console.log(c1.radius);
