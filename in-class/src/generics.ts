@@ -43,4 +43,4 @@ function log<T>(num: T):void{
     console.log(`type ${typeof num}`)
 }
 
-log('hello world')
+log(45)

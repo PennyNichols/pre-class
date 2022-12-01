@@ -34,4 +34,4 @@
 function log(num) {
     console.log(`type ${typeof num}`);
 }
-log('hello world');
+log(45);
