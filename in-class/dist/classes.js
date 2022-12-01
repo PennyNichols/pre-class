@@ -82,29 +82,34 @@
 // const admin = new Admin()
 // admin.addUser('john')
 // admin.printUsers();
-class Person {
-    // public name: string;
-    // private age: number;
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-        this.name = name;
-        this.age = age;
-    }
-    getAge() {
-        return this.age;
-    }
-    setAge(newAge) {
-        if (newAge > 0 && newAge <= 100) {
-            this.age = newAge;
-        }
-        else {
-            throw new Error('Invalid Age Value');
-        }
+// class Person {
+//     // public name: string;
+//     // private age: number;
+//     constructor(public name: string, private age: number){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     getAge(): number{
+//         return this.age;
+//     }
+//     setAge(newAge: number){
+//         if (newAge > 0 && newAge <= 100) {
+//             this.age = newAge
+//         } else {
+//             throw new Error('Invalid Age Value')
+//         }
+//     }
+// }
+// const mike = new Person ('mike', 36);
+// // console.log(mike.age)    wont work!! Private!
+// console.log(mike.getAge())
+// mike.setAge(8)
+// console.log(mike.getAge())
+class Employee {
+    constructor(empCode, empName) {
+        this.empCode = empCode;
+        this.empName = empName;
+        this.empCode = empCode;
+        this.empName = empName;
     }
 }
-const mike = new Person('mike', 36);
-// console.log(mike.age)    wont work!! Private!
-console.log(mike.getAge());
-mike.setAge(8);
-console.log(mike.getAge());
