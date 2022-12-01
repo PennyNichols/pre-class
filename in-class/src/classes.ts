@@ -188,17 +188,26 @@
 
 // const tv = new Product('tv')
 
-class Circle {
-    constructor(public radius: number){}
-    get diameter(){
-        return this.radius*2
-    }
-    set diameter(d:number){
-        this.radius = Math.floor(d/2)
-    }
+// class Circle {
+//     constructor(public radius: number){}
+//     get diameter(){
+//         return this.radius*2
+//     }
+//     set diameter(d:number){
+//         this.radius = Math.floor(d/2)
+//     }
+// }
+
+// let c1 = new Circle(5)
+// console.log(c1.diameter)
+// c1.diameter = 20
+// console.log(c1.radius)
+
+interface Person {
+    name: string
 }
 
-let c1 = new Circle(5)
-console.log(c1.diameter)
-c1.diameter = 20
-console.log(c1.radius)
+type bolOrStr = string | boolean
+
+const person: Person = {name: 'penny'}
+const isMarried: bolOrStr = true;
