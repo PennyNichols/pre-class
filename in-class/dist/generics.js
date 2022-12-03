@@ -35,15 +35,12 @@
 //     console.log(`type ${typeof num}`)
 // }
 // log(45)
-class KeyValuePair {
-    constructor(key, value) {
-        this.key = key;
-        this.value = value;
-    }
-}
-const obj = new KeyValuePair('name', 'John');
-const obj2 = new KeyValuePair('age', 50);
-const obj3 = new KeyValuePair(1, 'one');
-console.log(obj);
-console.log(obj2);
-console.log(obj3);
+// class KeyValuePair<T,U>{
+//     constructor(public key: T, public value: U){}
+// }
+// const obj = new KeyValuePair('name', 'John')
+// const obj2 = new KeyValuePair('age', 50)
+// const obj3 = new KeyValuePair(1, 'one')
+// console.log(obj)
+// console.log(obj2)
+// console.log(obj3)

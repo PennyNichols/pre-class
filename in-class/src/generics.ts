@@ -45,14 +45,14 @@
 
 // log(45)
 
-class KeyValuePair<T,U>{
-    constructor(public key: T, public value: U){}
-}
+// class KeyValuePair<T,U>{
+//     constructor(public key: T, public value: U){}
+// }
 
-const obj = new KeyValuePair('name', 'John')
-const obj2 = new KeyValuePair('age', 50)
-const obj3 = new KeyValuePair(1, 'one')
+// const obj = new KeyValuePair('name', 'John')
+// const obj2 = new KeyValuePair('age', 50)
+// const obj3 = new KeyValuePair(1, 'one')
 
-console.log(obj)
-console.log(obj2)
-console.log(obj3)
+// console.log(obj)
+// console.log(obj2)
+// console.log(obj3)
